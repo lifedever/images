@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="serverGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1D4ED8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="folderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D97706;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- NAS Server/Storage Device -->
+  <g transform="translate(100, 100)">
+    <!-- Server chassis -->
+    <rect x="-50" y="-45" width="100" height="90" rx="8" 
+          fill="url(#serverGradient)" stroke="#1E40AF" stroke-width="2"/>
+    
+    <!-- Server front panel detail -->
+    <rect x="-45" y="-40" width="90" height="80" rx="4" 
+          fill="#1E3A8A" opacity="0.3"/>
+    
+    <!-- Drive bays (4 horizontal slots) -->
+    <g id="driveBays">
+      <!-- Bay 1 -->
+      <rect x="-40" y="-32" width="75" height="12" rx="2" 
+            fill="#1E293B" stroke="#334155" stroke-width="1"/>
+      <circle cx="-32" cy="-26" r="2" fill="#10B981"/>
+      <rect x="-25" y="-30" width="50" height="8" rx="1" fill="#374151"/>
+      
+      <!-- Bay 2 -->
+      <rect x="-40" y="-15" width="75" height="12" rx="2" 
+            fill="#1E293B" stroke="#334155" stroke-width="1"/>
+      <circle cx="-32" cy="-9" r="2" fill="#10B981"/>
+      <rect x="-25" y="-13" width="50" height="8" rx="1" fill="#374151"/>
+      
+      <!-- Bay 3 -->
+      <rect x="-40" y="2" width="75" height="12" rx="2" 
+            fill="#1E293B" stroke="#334155" stroke-width="1"/>
+      <circle cx="-32" cy="8" r="2" fill="#10B981"/>
+      <rect x="-25" y="4" width="50" height="8" rx="1" fill="#374151"/>
+      
+      <!-- Bay 4 -->
+      <rect x="-40" y="19" width="75" height="12" rx="2" 
+            fill="#1E293B" stroke="#334155" stroke-width="1"/>
+      <circle cx="-32" cy="25" r="2" fill="#10B981"/>
+      <rect x="-25" y="21" width="50" height="8" rx="1" fill="#374151"/>
+    </g>
+    
+    <!-- Status LEDs on the right -->
+    <circle cx="42" cy="-26" r="2.5" fill="#EF4444" opacity="0.8"/>
+    <circle cx="42" cy="-9" r="2.5" fill="#10B981" opacity="0.8"/>
+    <circle cx="42" cy="8" r="2.5" fill="#10B981" opacity="0.8"/>
+    <circle cx="42" cy="25" r="2.5" fill="#3B82F6" opacity="0.8"/>
+    
+    <!-- Open folder icon emerging from server -->
+    <g transform="translate(0, 60)">
+      <!-- Folder back -->
+      <path d="M -35 -8 L -35 -15 Q -35 -18 -32 -18 L -8 -18 L 0 -10 L 28 -10 Q 32 -10 32 -6 L 32 15 Q 32 18 28 18 L -32 18 Q -35 18 -35 15 Z" 
+            fill="url(#folderGradient)" opacity="0.9" stroke="#B45309" stroke-width="1.5"/>
+      
+      <!-- Folder tab highlight -->
+      <path d="M -35 -8 L -35 -15 Q -35 -18 -32 -18 L -8 -18 L 0 -10 L 28 -10 Q 32 -10 32 -6 Z" 
+            fill="#FBBF24" opacity="0.4"/>
+      
+      <!-- File icons inside folder -->
+      <g opacity="0.7">
+        <rect x="-25" y="-2" width="12" height="14" rx="1" fill="#FFFFFF" stroke="#D97706" stroke-width="1"/>
+        <line x1="-22" y1="2" x2="-16" y2="2" stroke="#D97706" stroke-width="1"/>
+        <line x1="-22" y1="5" x2="-16" y2="5" stroke="#D97706" stroke-width="1"/>
+        <line x1="-22" y1="8" x2="-16" y2="8" stroke="#D97706" stroke-width="1"/>
+        
+        <rect x="-8" y="-2" width="12" height="14" rx="1" fill="#FFFFFF" stroke="#D97706" stroke-width="1"/>
+        <line x1="-5" y1="2" x2="1" y2="2" stroke="#D97706" stroke-width="1"/>
+        <line x1="-5" y1="5" x2="1" y2="5" stroke="#D97706" stroke-width="1"/>
+        <line x1="-5" y1="8" x2="1" y2="8" stroke="#D97706" stroke-width="1"/>
+        
+        <rect x="9" y="-2" width="12" height="14" rx="1" fill="#FFFFFF" stroke="#D97706" stroke-width="1"/>
+        <line x1="12" y1="2" x2="18" y2="2" stroke="#D97706" stroke-width="1"/>
+        <line x1="12" y1="5" x2="18" y2="5" stroke="#D97706" stroke-width="1"/>
+        <line x1="12" y1="8" x2="18" y2="8" stroke="#D97706" stroke-width="1"/>
+      </g>
+    </g>
+    
+    <!-- Network connection indicator -->
+    <g transform="translate(0, -60)">
+      <!-- Network icon -->
+      <circle cx="0" cy="0" r="8" fill="url(#accentGradient)" opacity="0.9"/>
+      <path d="M -3 -2 L -3 2 L 3 2 L 3 -2 Z M -1 -4 L -1 -2 M 1 -4 L 1 -2" 
+            stroke="#FFFFFF" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <circle cx="-3" cy="0" r="0.8" fill="#FFFFFF"/>
+      <circle cx="3" cy="0" r="0.8" fill="#FFFFFF"/>
+      
+      <!-- Connection line to server -->
+      <line x1="0" y1="8" x2="0" y2="25" stroke="#10B981" stroke-width="2" opacity="0.6" stroke-dasharray="3,3"/>
+    </g>
+  </g>
+</svg>
